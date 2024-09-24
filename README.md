@@ -13,4 +13,4 @@ En el primer tema vamos a trabajar con MarkDown que es un lenguaje sencillo de m
 4. Establecer enlaces como [este] (https://markdown.es/sintaxis-markdown/#links)
 
 **Un ejemplo de negrita**
-_Un ejemplo de cursiva_
+*Ejemplo de cursiva*
