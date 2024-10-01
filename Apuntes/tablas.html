@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablas</title>
+</head>
+<body>
+    <h1>Tablas</h1>
+    <p>Una tabla permite la distribución de la información organizadas por filas y columnas</p>
+    <table border="1">
+        <!--cada fila tiene un tr-->
+        <!--cada celda tiene un td-->
+
+        <tr>
+            <td>elemnto 1</td>
+            <td>elemnto 2</td>
+        </tr>
+        <tr>
+            <td>elemnto 1</td>
+            <td>elemnto 2</td>
+        </tr>
+    </table>
+
+    <h2>problemas</h2>
+
+    <p>vamos a experimentar cuando el número de columnas no sea en todad las filas (esto esta mal)</p>
+
+    <table border="1">
+    <tr>
+        <td>elemnto 2</td>
+    </tr>
+    <tr>
+        <td>elemnto 1</td>
+        <td>elemnto 2</td>
+    </tr>
+    </table>
+
+    <h2>solucíon</h2>
+
+    <p>si deseamos que una celda ocupe más de una columna utilizaremos estas propiedades. Ejemplo:</p>
+
+    <table border="1">
+    <tr>
+        <td colspan="2" bgcolor="red">elemnto 2</td>
+    </tr>
+    <tr>
+        <td>elemnto 1</td>
+        <td>elemnto 2</td>
+    </tr>
+    </table>
+
+    <br>
+
+    <table border="1">
+        <tr>
+            <td>elemento1</td>
+            <td rowspan="2" bgcolor="green">elemnto 2</td>
+        </tr>
+        <tr>
+            <td>elemnto 1</td>
+        </tr>
+        </table>
+
+    <h2>Ejercicio</h2>
+
+    <p>Hacer el horario</p>
+
+        <br>
+
+    <table border="1">
+        <tr>
+            <td></td>
+            <td>Lunes</td>
+            <td>Martes</td>
+            <td>Miercoles</td>
+            <td>Jueves</td>
+            <td>Viernes</td>
+            
+        </tr>
+        <tr>
+            <td>8:00-9:00</td>
+            <td>FunH</td>
+            <td>BD</td>
+            <td>ISO</td>
+            <td>ISO</td>
+            <td>ISO</td>
+            
+        </tr>
+        <tr>
+            <td>9:00-10:00</td>
+            <td>ISO</td>
+            <td>BD</td>
+            <td>ISO</td>
+            <td>ISO</td>
+            <td>ISO</td>
+        </tr>
+
+        <tr>
+            <td>10:00-11:00</td>
+            <td>DIGP</td>
+            <td>FOL</td>
+            <td>BD</td>
+            <td>FUNH</td>
+            <td>BD</td>
+        </tr>
+
+        <tr>
+            <td>11:30-12:30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>12:30-13:30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>13:30-14:30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+
+    </table>
+
+</body>
+</html>
