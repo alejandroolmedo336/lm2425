@@ -10,9 +10,23 @@
     <h1 style="color: crimson;"><u>Ejercicios formularios</u></h1>
 
     <form action="">
+
+    <fieldset>
+        <legend>Rellenar</legend>
+
         <input type="radio" name="idioma" id="">Inglés <br>
         <input type="radio" name="idioma" id="">Alemán <br>
         <input type="radio" name="idioma" id="">Francés <br>
+        <hr>
+        <br>
+
+        <select name="conector" id="">
+            <option value="USB">USB</option>
+            <option value="Paralelo">Paralelo</option>
+            <option value="ps2">ps2</option>
+        </select>
+        <br>
+        <hr>
         <br>
 
         <label for="">Nombre:</label><br>
@@ -21,14 +35,34 @@
         <label for="">Apellidos:</label><br>
         <input type="text" name="apellidos" id="">
         <br>
+        <hr>
         <br>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Indique sus preferencias por favor</legend>
+
+        <select name="" id="" size="4">
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+        </select>
+        <br>
+        <hr>
 
         <input type="checkbox" name="mujer" id="">Mujer <br>
         <input type="checkbox" name="hombre" id="">Hombre <br>
+        <hr>
         <br>
 
         <label for="">Elija una fecha:</label> <br>
-        <input type="text" name="fecha" id="dd/mm/aaaa">
+        <input type="date" name="fecha" id="dd/mm/aaaa"><br>
+        <br>
+
+    </fieldset>
+
     </form>
 
 </body>
