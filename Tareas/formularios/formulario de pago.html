@@ -30,24 +30,24 @@
 
                 <legend>Tratamiento</legend>
 
-                <input type="radio" name="" id="">Sr/Sra<br>
-                <input type="radio" name="" id="">Dr/Dra<br>
-                <input type="radio" name="" id="">Otro<br>
+                <input type="radio" name="Tratamiento" id="">Sr/Sra<br>
+                <input type="radio" name="Tratamiento" id="">Dr/Dra<br>
+                <input type="radio" name="Tratamiento" id="">Otro<br>
 
             </fieldset>
             <br>
 
             <label for="">Nombre: *</label><br>
-            <input type="text"><br>
+            <input type="text" required name="nombre"><br>
 
             <label for="">Correo: *</label><br>
-            <input type="text"><br>
+            <input type="email" required name="email"><br>
 
             <label for="">Número de telefono: *</label><br>
-            <input type="text"><br>
+            <input type="tel" required name="tel"><br>
 
             <label for="">Contraseña: *</label><br>
-            <input type="text"><br>
+            <input type="password" required name="password"><br>
 
         </fieldset>
 
@@ -56,7 +56,7 @@
             <legend><strong>Información de pago</strong></legend>
             
             <label for="">Tipo de tarjeta:</label>
-            <select name="" id="">
+            <select name="tarjeta" id="">
                 <option value="visa">Visa</option>
             </select><br>
             <br>
