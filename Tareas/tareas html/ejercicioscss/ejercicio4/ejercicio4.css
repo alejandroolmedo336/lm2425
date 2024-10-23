@@ -1,0 +1,6 @@
+div p {
+    text-align: center; background-color: aqua; color: red;
+}
+.resaltado {
+    background-color: yellow; font-style: italic;
+}
