@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <style>
+        .diventero {
+            overflow: auto;
+        }
+        #divlista {
+            margin: 0;
+            padding: 0;
+        }
+        #lista {
+            float: none;
+            width: auto;
+        }
+        .menulista {
+            background-color: aquamarine;
+            border: 1px solid #d4d4d4;
+            border-radius: 4px;
+            list-style-type: none;
+            margin: 4px;
+            padding: 2px;
+        }
+        #divtexto {
+            margin-left: 4px;
+        }
+        @media screen and (min-width: 480px) {
+            #divlista {width: 200px; float: left;}
+            #divtexto {margin-left: 216px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="diventero">
+        <div id="divlista">
+            <ul id="lista">
+                <li class="menulista">Menu-item 1</li>
+                <li class="menulista">Menu-item 2</li>
+                <li class="menulista">Menu-item 3</li>
+                <li class="menulista">Menu-item 4</li>
+                <li class="menulista">Menu-item 5</li>
+            </ul>
+        </div>
+        <div id="divtexto">
+            <h1>Media queries</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quibusdam, cupiditate ullam laborum tempora quas vitae. Vel expedita velit molestias, corrupti alias adipisci deleniti sunt aliquam tempore ipsam doloremque fugiat.
+        </div>
+    </div>
+</body>
+</html>
