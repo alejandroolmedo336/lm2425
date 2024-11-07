@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media queries</title>
     <style>
+        body {
+            background-color: cadetblue;
+        }
         h1 {
             font-style: italic;
         }
@@ -33,9 +36,12 @@
         @media screen and (min-width: 480px) {
             #divlista {width: 200px; float: left;}
             #divtexto {margin-left: 216px;}
+            body {background-color: dimgrey;}
         }
         #titulo {
             text-align: center;
+            border-style: outset;
+            background-color: darkkhaki; 
         }
     </style>
 </head>
