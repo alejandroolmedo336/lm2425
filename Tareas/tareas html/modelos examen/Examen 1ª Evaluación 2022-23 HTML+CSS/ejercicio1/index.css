@@ -1,0 +1,64 @@
+html {
+    background-color: crimson;
+}
+header {
+    background-color: yellow;
+    text-align: center;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+section {
+    background-color: white;
+    width: 480px;
+    height: 400px;
+    margin: auto;
+    padding: 100px;
+}
+section:hover {
+    background-color: crimson;
+}
+p {
+    margin: 10px;
+    text-decoration: none;
+
+}
+img {
+    height: auto;
+    width: 400px;
+    border-radius: 60px;
+    margin: auto;
+    padding: 50px;
+    position: absolute;
+    top: 30px;
+}
+#aside1  {
+    height: auto;
+    width: 200px;
+    position: absolute;
+    left: 1040px;
+    top: 300px;
+}
+#aside2  {
+    height: auto;
+    width: 200px;
+    position: absolute;
+    left: 20px;
+    top: 300px;
+}
+footer {
+    background-color: yellow;
+    text-align: center;
+    height: 25px;
+    border-end-end-radius: 10px;
+    border-end-start-radius: 10px;
+}
+p::first-letter {
+    font-size: 1rem;
+    font-weight: bold;
+}
+div {
+    position: absolute;
+    top: 350px;
+    width: 500px;
+}
