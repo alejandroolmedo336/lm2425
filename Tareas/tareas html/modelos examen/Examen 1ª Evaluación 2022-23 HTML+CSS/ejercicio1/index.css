@@ -62,3 +62,7 @@ div {
     top: 350px;
     width: 500px;
 }
+a {
+    text-decoration: none;
+    color: yellow;
+}
