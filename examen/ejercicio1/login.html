@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario responsive con animación</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-family: sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            color: #333;
+            background: linear-gradient(135deg, #6d83f2, #bad4f3) no-repeat fixed;
+            display: grid;
+            align-items: center;
+        }
+        form {
+            background-color: white;
+            display: grid;
+            border-radius: 8px;
+            box-shadow: 5px 5px 5px;
+            max-width: 600px;
+            width: 90%;
+            padding: 2.5rem;
+            grid-column: 2;
+            grid-template-columns: 1fr;
+            column-gap: 1rem;
+            
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #444;
+            border-bottom: #ccc 2px dashed;
+            padding-bottom: 1rem;
+           
+        }
+        .correo {
+            margin-top: 15px;
+            display: grid;
+            grid-column: 1;
+            grid-gap: 0.5rem;
+            padding: 1rem;
+            border: #ddd 2px dashed;
+          
+        }
+        .contraseña {
+            margin-top: 15px;
+            display: grid;
+            grid-column: 1;
+            grid-gap: 0.5rem;
+            padding: 1rem;
+            border: #ddd 2px dashed;
+            
+        }
+        label {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            transition: 1s;
+        }
+        input:hover {
+            border-color: #ffda44;
+            box-shadow: 10px 10px 10px #ffda44;
+        }
+        .olvidacontra {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            border: #ddd 2px dashed;
+            padding: 0.5rem;
+            font-size: 0.85rem;
+        }
+        a {
+            color: #6d83f2;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #5066c5;
+            cursor: alias;
+        }
+        .darsealta {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            border: #ddd 2px dashed;
+        }
+        button {
+            border-radius: 5px;
+            background-color: #6d83f2;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 0.75rem;
+
+        }
+        button:hover {
+            background-color: #5066c5;
+            cursor: pointer;
+        }
+        .daralta {
+            background-color: #9ec9ff;
+        }
+        .daralta:hover {
+            background-color: #7aa6e6;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .darsealta {
+                display: flex;
+                grid-row: 4;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="container">
+        <h1 class="encabezado">Inicia Sesión</h1>
+        <fieldset class="correo">
+            <label for="">Correo Electrónico</label>
+            <input type="email">
+        </fieldset>
+        <fieldset class="contraseña">
+            <label for="">Contraseña</label>
+            <input type="password">
+        </fieldset>
+        <fieldset class="olvidacontra">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+            <a href="#">Darse de alta</a>
+        </fieldset>
+        <fieldset class="darsealta">
+            <button>Iniciar Sesión</button>
+            <button class="daralta">Darse de alta</button>
+        </fieldset>
+    </form>
+</body>
+</html>
