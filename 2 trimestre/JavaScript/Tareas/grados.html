@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Moneda</title>
+  <script src="ejercicio2.js"></script>
+</head>
+<body>
+    <h1>Conversor de grados</h1>
+    <input type="text" id="grados">
+    <button onclick="convertir_a_celsius()">Convertir a Celsius</button>
+    <button onclick="convertir_a_faren()">Convertir a Farenhihg</button>
+    <p id="resultado"></p>
+
+    <script>
+        function convertir_a_celsius() {
+        let grados = parseFloat(document.getElementById("grados").value);
+        let resultado = (grados-32)/1.8;
+        if (isNaN(resultado)) {
+            document.getElementById("resultado").innerHTML = "Capullo debes introducir un número"
+        }
+        else {
+            document.getElementById("resultado").innerHTML = "La conversión a celcius es " +resultado;
+        }
+
+        //alert("Los grados Celcius son: "+resultado) esto es una forma
+        //document.getElementById("resultado").innerHTML = "La conversión a celcius es " +resultado;
+        }
+        function convertir_a_faren() {
+            let grados = parseFloat(document.getElementById("grados").value);
+        let resultado = grados * (9/5) + 32;
+        if (isNaN(resultado)) {
+            document.getElementById("resultado").innerHTML = "Capullo debes introducir un número"
+        }
+        else {
+            document.getElementById("resultado").innerHTML = "La conversión a celcius es " +resultado;
+        }
+        //alert("Los grados Celcius son: "+resultado) esto es una forma
+        //document.getElementById("resultado").innerHTML = "La conversión a celcius es " +resultado;
+        }
+    </script>
+</body>
+</html>

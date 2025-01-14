@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Moneda</title>
+  <script src="ejercicio2.js"></script>
+</head>
+<body>
+    <form>
+      Cantidad: <input type="number" id="cantidad"><br>
+      Convertir a:
+      <select id="tipo">
+        <option value="dolares">Dólares</option>
+        <option value="euros">Euros</option>
+      </select><br>
+      <button type="button" onclick="convertir()">Convertir</button>
+    </form>
+    <p id="resultado"></p>
+
+<script>
+function convertir() {
+    const cantidad = parseFloat(document.getElementById("cantidad").value);
+    const tipo = document.getElementById("tipo").value;
+    const tasa = 0.94; // 1 $ = 0.94 €
+    const resultado = tipo === "dolares" ? cantidad / tasa : cantidad * tasa;
+    document.getElementById("resultado").innerText = 
+      `Resultado: ${resultado.toFixed(2)}`;
+  }
+</script>
+
+
+</body>
+</html>
