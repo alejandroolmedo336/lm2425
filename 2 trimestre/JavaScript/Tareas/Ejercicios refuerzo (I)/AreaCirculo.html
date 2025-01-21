@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area de un círculo</title>
+</head>
+<body>
+    <h1>Areá de un circulo</h1>
+    <input type="text" id="radio" placeholder="introducir el radio">
+    <button onclick="radioaarea()">Pulsa</button>
+    <p id="resultado"></p>
+
+    <script>
+        function radioaarea() {
+            let radio = parseFloat(document.getElementById("radio").value);
+            let resultado = 3.14 * radio * radio;
+            if (isNaN(resultado)){
+                 document.getElementById("resultado").innerHTML = "Capullo debes introducir un número"
+            }
+            else {
+                document.getElementById("resultado").innerHTML = "el área es de " +resultado;
+            }
+        }
+    </script>
+</body>
+</html>

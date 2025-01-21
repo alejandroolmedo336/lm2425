@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expediente académico</title>
+</head>
+<body>
+    <h1>Expediente Académico</h1>
+    <input type="text" id="mates" placeholder="Nota de mates">
+    <input type="text" id="lengua" placeholder="Nota de lengua">
+    <input type="text" id="tecnologia" placeholder="Nota de tecnologia">
+    <button onclick="media()">Pulsa para obtener media</button>
+    <p id="resultado"></p>
+
+    <script>
+        function media() {
+        let mates = parseFloat(document.getElementById("mates").value);
+        let lengua = parseFloat(document.getElementById("lengua").value);
+        let tecnologia = parseFloat(document.getElementById("tecnologia").value);
+        let resultado = (mates+ lengua + tecnologia) / 3;
+
+        if (isNaN(resultado)){
+                 document.getElementById("resultado").innerHTML = "debes introducir un número"
+            }
+            else {
+                document.getElementById("resultado").innerHTML = "la media es " +resultado;
+            }
+        }
+    </script>
+</body>
+</html>
