@@ -9,6 +9,22 @@
     <h1>Calcular IMC</h1>
     <input type="text" id="peso" placeholder="Introduce el peso en kg">
     <input type="text" id="altura" placeholder="Introduce la altura en m">
-    <button>Calcular</button>
+    <button onclick="calcula()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcula() {
+            let peso = parseFloat(document.getElementById("peso").value)
+            let altura = parseFloat(document.getElementById("altura").value)
+            let resultado = peso / (altura ** 2);
+
+            if (isNaN(resultado)) {
+                document.getElementById("resultado").innerHTML = "Debes introducir cifras"
+            }
+            else {
+                document.getElementById("resultado").innerHTML = "Tu IMC es" + resultado
+            }
+        }
+    </script>
 </body>
 </html>

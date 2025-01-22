@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par o Impar</title>
+</head>
+<body>
+    <h1>Par o Impar</h1>
+    <input type="text" id="numero" placeholder="Ingrese un número">
+    <button onclick="parimpar()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function parimpar() {
+            let numero = parseFloat(document.getElementById("numero").value)
+            let resultado = numero%2 == 0
+
+            if (isNaN(numero)) {
+                document.getElementById("resultado").innerHTML = "debes introducir numero"
+            }
+            else {
+                if (numero % 2 == 0) {
+                    document.getElementById("resultado").innerHTML = "el numero es par"
+                }
+                else {
+                    document.getElementById("resultado").innerHTML = "el numero es impar"
+                }
+            }
+        }
+    </script>
+</body>
+</html>
