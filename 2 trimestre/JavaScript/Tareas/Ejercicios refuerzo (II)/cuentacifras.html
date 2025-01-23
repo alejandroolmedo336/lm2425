@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=º, initial-scale=1.0">
+    <meta name="viewport" content="width, initial-scale=1.0">
     <title>Cuenta cifras</title>
 </head>
 <body>
     <h1>Cuenta cifras</h1>
-    <input type="text" id="numero" placeholder="Introduce numeros">
-    <button onclick="cuentacifras()">Pulse para ver cuantas cifras tiene su numero</button>
+    <input type="text" id="numero" placeholder="Introduce números">
+    <button onclick="cuentacifras()">Pulse para ver cuantas cifras tiene su número</button>
     <p id="resultado"></p>
 
     <script>
         function cuentacifras() {
-            let numero = parseInt(document.getElementById("numero")).value;
-            let resultado = numero / 10;
+            let elemento_value = document.getElementById("numero").value;
+            let numero = parseFloat(elemento_value);
+            //let numero = parseFloat(document.getElementById("numero").value);
 
             if (isNaN(numero)) {
                 document.getElementById("resultado").innerHTML = "Debes introducir cifras"
             }
             else {
-                document.getElementById("resultado").innerHTML = "Tu numero tiene" + resultado;
+                document.getElementById("resultado").innerHTML = "Tu numero tiene " + elemento_value.length + " cifras.";
             }
         }
     </script>
