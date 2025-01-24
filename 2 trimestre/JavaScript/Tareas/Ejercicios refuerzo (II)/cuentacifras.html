@@ -13,15 +13,15 @@
 
     <script>
         function cuentacifras() {
-            let elemento_value = document.getElementById("numero").value;
-            let numero = parseFloat(elemento_value);
-            //let numero = parseFloat(document.getElementById("numero").value);
+            //let elemento_value = document.getElementById("numero").value;
+            //let numero = parseInt(elemento_value);
+            let numero = parseInt(document.getElementById("numero").value);
 
             if (isNaN(numero)) {
                 document.getElementById("resultado").innerHTML = "Debes introducir cifras"
             }
             else {
-                document.getElementById("resultado").innerHTML = "Tu número tiene " + elemento_value.length + " cifras.";
+                document.getElementById("resultado").innerHTML = "Tu número tiene " + numero.toString().length + " cifras.";
             }
         }
     </script>
