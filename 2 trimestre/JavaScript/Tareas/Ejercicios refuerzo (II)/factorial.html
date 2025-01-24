@@ -13,8 +13,17 @@
 
     <script>
         function factorial() {
-            let numero = parseFloat(document.getElementById("numero").value)
-            let resultado = numero*(numero)*(numero−2)*...*2*1n!=numero*(numero)*(n−2)*...*2*1
+            let numero = parseInt(document.getElementById("numero").value)
+            let resultado = 1;
+            
+            if (isNaN(numero) || numero < 0) {
+                document.getElementById(resultado).innerHTML = "Debes introducir Cifras enteras"
+            }
+            for (let i = 2; i <= numero; i++) {
+                resultado = resultado * i;
+            }
+
+            document.getElementById("resultado").innerHTML = "El factorial es " + resultado;
         }
     </script>
 </body>
