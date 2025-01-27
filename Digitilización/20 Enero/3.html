@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenedores en la Nube</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-item {
+            min-height: 500px;
+            background-color: #f8f9fa;
+        }
+
+        .content-wrapper {
+            min-height: 500px;
+            padding: 40px;
+            background-color: #f8f9fa;
+        }
+
+        .carousel-caption {
+            position: static;
+            color: #000;
+            text-align: left;
+            padding: 0;
+        }
+
+        .example-box {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #0d6efd;
+            margin-bottom: 20px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #0d6efd;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        .carousel-indicators {
+            bottom: -50px;
+        }
+
+        .carousel-indicators button {
+            background-color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Contenedores en la Nube</h1>
+        
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="IaaS"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="PaaS"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="SaaS"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="content-wrapper d-block w-100">
+                        <div class="carousel-caption">
+                            <h2>Infraestructura como servicio (IaaS)</h2>
+                            <p>La infraestructura como servicio (IaaS) ofrece acceso bajo demanda a servicios de infraestructura informática, como computación, almacenamiento, redes y virtualización. Se asemeja más a los recursos informáticos tradicionales. Algunos ejemplos son Google Compute Engine, Azure Virtual Machines o Amazon EC2.</p>
+                            <div class="example-box">
+                                <h4>Ejemplo:</h4>
+                                <p>IaaS es como alquilar todos los componentes básicos de un ordenador: el poder de procesamiento, el espacio para guardar cosas, la conexión a Internet y hasta la capacidad de crear "computadoras virtuales". Tienes mucho control sobre los recursos, como si estuvieras manejando tu propia computadora, pero todo está en la nube en lugar de estar físicamente en tu escritorio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-wrapper d-block w-100">
+                        <div class="carousel-caption">
+                            <h2>Plataforma como servicio (PaaS)</h2>
+                            <p>La plataforma como servicio (PaaS) ofrece todos los recursos de hardware y software necesarios para desarrollar aplicaciones en la nube, sin la carga que supone gestionar y mantener la infraestructura subyacente. Algunos ejemplos incluyen Google App Engine, Azure App Engine o Salesforce.</p>
+                            <div class="example-box">
+                                <h4>Ejemplo:</h4>
+                                <p>PaaS es como alquilar un ordenador capaz de construir aplicaciones. Las empresas pueden concentrarse en desarrollar sus programas y aplicaciones sin preocuparse por los detalles técnicos y el mantenimiento de la infraestructura.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-wrapper d-block w-100">
+                        <div class="carousel-caption">
+                            <h2>Software como servicio (SaaS)</h2>
+                            <p>El software como servicio (SaaS) proporciona un completo abanico de aplicaciones, desde la infraestructura hasta el mantenimiento y las actualizaciones del propio software de la aplicación. Una solución de SaaS es, a menudo, una aplicación de usuario final donde el servicio y la infraestructura la gestiona y mantiene el proveedor de servicios en la nube. Algunos ejemplos son: Amazon AWS, Google Workspace y Microsoft 365.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
