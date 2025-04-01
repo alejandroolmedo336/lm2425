@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+</head>
+<body>
+    <h1>Lista de tareas</h1>
+    <input type="text" id="entrada" placeholder="Ingrese una tarea">
+    <button onclick="anadir()">Añadir tarea</button>
+    <ul>
+        <li id="tareas"></li>
+    </ul>
+    <script>
+        let arraytareas = [];
+
+        function anadir() {
+            let entrada = document.getElementById("entrada").value
+            arraytareas.push(entrada);
+            if (entrada!="") {
+                localStorage.setItem("tareas", JSON.stringify(arraytareas));
+                document.getElementById("tareas").innerHTML = arraytareas;
+            }
+        }
+        
+        function cargartarea() {
+            let arraytareas = JSON.parse.localStorage.getItem("tareas");
+            if (tareas != null) {
+                document.getElementById("tareas").innerHTML = arraytareas;
+            } else {
+                document.getElementById("tareas").innerHTML = 'no hay nada';
+            }
+        }
+
+        window.onload=cargartarea
+    </script>
+</body>
+</html>
