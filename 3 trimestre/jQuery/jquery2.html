@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery2</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <h1 id="titulo">Introducción a jQuery</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti qui, eligendi libero nulla ad, molestiae natus eveniet ea, aspernatur error laboriosam. Quis ab maxime, id quaerat tempore cumque quidem deleniti?</p>
+    <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, voluptates. Nam, possimus facere? Inventore neque voluptates molestias beatae aliquam ex dolore dolor delectus perspiciatis, fugiat totam, eligendi, incidunt quibusdam deserunt!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quaerat, aspernatur culpa odio, consectetur laboriosam ullam incidunt ipsam debitis iure fugiat eos totam eius, voluptatem exercitationem maxime ex quia quod.</p>
+    <p class="par">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quaerat, aspernatur culpa odio, consectetur laboriosam ullam incidunt ipsam debitis iure fugiat eos totam eius, voluptatem exercitationem maxime ex quia quod.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab distinctio tempore nesciunt hic sunt rerum, quo accusamus at facere, labore quis, ex iusto obcaecati consequatur architecto exercitationem sequi ipsa quidem.</p>
+    <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste repudiandae dolorum ratione ex facere ab numquam! Consectetur, sit eos. Similique, modi hic quo dolore explicabo necessitatibus non laudantium rem dolorum.</p>
+
+    <button id="ocultar">ocultar</button>
+    <button id="mostrar">mostrar</button>
+
+    <script>
+
+        $(document).ready(function () {
+                $("#ocultar").click(function ()
+                {
+                    $(".par").hide();
+                    $("#titulo").hide();
+            })
+                $("#mostrar").click(function ()
+                {
+                    $(".par").show();
+                    $("#titulo").show();
+            })
+        });
+
+    </script>
+</body>
+</html>

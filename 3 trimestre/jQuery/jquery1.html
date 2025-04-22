@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <h1>Introducción a jQuery</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti qui, eligendi libero nulla ad, molestiae natus eveniet ea, aspernatur error laboriosam. Quis ab maxime, id quaerat tempore cumque quidem deleniti?</p>
+    <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, voluptates. Nam, possimus facere? Inventore neque voluptates molestias beatae aliquam ex dolore dolor delectus perspiciatis, fugiat totam, eligendi, incidunt quibusdam deserunt!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quaerat, aspernatur culpa odio, consectetur laboriosam ullam incidunt ipsam debitis iure fugiat eos totam eius, voluptatem exercitationem maxime ex quia quod.</p>
+    <button id="ocultar">ocultar</button>
+    <button id="mostrar">mostrar</button>
+
+    <script>
+
+        $(document).ready(function () {
+                $("#ocultar").click(function (){
+                    $("#second").hide();
+            })
+                $("#mostrar").click(function (){
+                    $("#second").show();
+            })
+        });
+
+    </script>
+</body>
+</html>
