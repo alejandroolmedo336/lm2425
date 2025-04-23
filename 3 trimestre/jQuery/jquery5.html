@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery5</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quae impedit soluta vel rem deleniti itaque adipisci. Corporis voluptas vero debitis nemo id, iure dolore ratione sequi esse nesciunt hic.</p>
+
+    <button id="btn1">Fade out</button>
+    <button id="btn2">Fade in</button>
+
+    <p>fadetoogle hace lo mismo pero con un solo botón lo hace desaparecer y aparecer y puedes ponerlo a tu gusto como desaparece y aparece el objeto que quieras</p>
+
+    <script>
+
+        $(document).ready(function () {
+                        $("#btn1").click(function ()
+                        {
+                            $("#p1").fadeOut();
+                    })
+                        $("#btn2").click(function ()
+                        {
+                            $("#p1").fadeIn();
+                    })
+                });
+
+    </script>
+</body>
+</html>

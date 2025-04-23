@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery8</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <p>h vbsdjhcvbshdvbcbsd</p>
+    <img src="https://yt3.googleusercontent.com/0XAN5rRn3okn2LDZkpp4iafiOyhv11bf1Tjwtge4ROPnoihXPjyh6Djpfh1gGHmGXr9TPVx6=s900-c-k-c0x00ffffff-no-rj" alt="..." style="height: 70px; width: 70px;">
+
+    <button id="btn1">Obtener html encabezado</button>
+    <button id="btn2">Obtener src imagen</button>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn2').click(function(){
+                alert("El src es" + $("img").attr("src"))
+            });
+
+            $('#btn1').click(function(){
+                alert("El html es" + $("p").html)
+            });
+        });
+    </script>
+</body>
+</html>
