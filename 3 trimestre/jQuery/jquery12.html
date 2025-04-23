@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery10</title>
+    <title>jQuery12</title>
     <script src="jquery-3.7.1.js"></script>
 </head>
 <body>
-    <input type="text" placeholder="....">
-    <button id="btn1">Pulse para poner hola en el recuadro</button>
+    <p>hvasdchjvsdchjvsdchvsdchvsdchkvsdc</p>
+    <button>mostrar/ocultar</button>
 
     <script>
+
         $(document).ready(function(){
-            $("#btn1").click(function(){
-                $("input").val("hola")
+            $("button").click(function(){
+                $("p").toggle()
             })
-    });
+        })
+
     </script>
 </body>
 </html>

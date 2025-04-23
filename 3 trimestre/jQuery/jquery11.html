@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery10</title>
+    <title>jQuery11</title>
     <script src="jquery-3.7.1.js"></script>
 </head>
 <body>
-    <input type="text" placeholder="....">
-    <button id="btn1">Pulse para poner hola en el recuadro</button>
+    <div style="background-color: gray;">
+        <p>Este texto esta dentro del div</p>
+        <p>Y este parrafo tambien lo esta</p>
+    </div>
+    <p>Este parrafo no esta dentro</p>
+    <button id="btn1">Elimna el div</button>
 
     <script>
         $(document).ready(function(){
             $("#btn1").click(function(){
-                $("input").val("hola")
-            })
-    });
+                $("div").empty()
+        })
+        })
     </script>
 </body>
 </html>
