@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro al Evento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      padding: 20px;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .checkbox-group {
+      margin-top: 10px;
+    }
+    .checkbox-group label {
+      display: block;
+      font-weight: normal;
+    }
+    .error {
+      color: red;
+      font-size: 12px;
+      visibility: hidden;
+      height: 16px;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<form id="registroEvento">
+  <label for="usuario">Nombre de usuario:</label>
+  <input type="text" id="nombre" name="usuario">
+  <span id="errorNombre" class="error">Este campo es obligatorio.</span>
+
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" name="email">
+  <span id="errorEmail" class="error">Ingrese un correo válido.</span>
+
+  <label for="telefono">Teléfono móvil:</label>
+  <input type="tel" id="telefono" name="telefono">
+  <span id="errorTelefono" class="error">Debe tener al menos 9 dígitos numéricos.</span>
+
+  <label for="fechaNacimiento">Fecha de nacimiento:</label>
+  <input type="number" id="fecha" name="fechaNacimiento">
+  <span id="errorFecha" class="error">Debe ser mayor de 18 años.</span>
+
+  <label for="entrada">Tipo de entrada:</label>
+  <select id="entrada" name="entrada">
+    <option value="">Seleccione una opción</option>
+    <option value="general">General</option>
+    <option value="vip">VIP</option>
+    <option value="online">Online</option>
+  </select>
+  <span id="errorEntrada" class="error">Seleccione un tipo de entrada.</span>
+
+  <label>Actividades opcionales:</label>
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="actividad" value="taller" id="actividad1"> Taller de programación</label>
+    <label><input type="checkbox" name="actividad" value="networking" id="actividad2"> Networking</label>
+    <label><input type="checkbox" name="actividad" value="sorteo" id="actividad3"> Sorteo de premios</label>
+  </div>
+  <span id="errorActividades" class="error">Seleccione al menos una actividad.</span>
+
+  <div class="checkbox-group">
+    <label><input type="checkbox" id="politica" name="politica"> Acepto la política de privacidad</label>
+  </div>
+  <span id="errorPolitica" class="error">Debe aceptar la política de privacidad.</span>
+
+  <button type="submit">Registrarse</button>
+</form>
+
+<!-- Aquí va tu script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () 
+{
+    const formulario = document.getElementById("registroEvento");
+
+    formulario.addEventListener("submit", function (evt) 
+    {
+        evt.preventDefault();
+    
+    let nombre = document.getElementById('nombre');
+    let email = document.getElementById('email');
+    let telefono = document.getElementById('telefono');
+    let fecha = document.getElementById('fecha');
+    let entrada = document.getElementById('entrada');
+    let actividad1 = document.getElementById('actividad1');
+    let actividad2 = document.getElementById('actividad2');
+    let actividad3 = document.getElementById('actividad3');
+    let politica = document.getElementById('politica');
+
+    //nombre
+    if (nombre.value === '') {
+        mostrarError('errorNombre')
+    } else {
+        ocultarError('errorNombre')
+    }
+
+    if (email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1)
+        {
+            mostrarError("errorEmail");
+        }
+        else
+        {
+            ocultarError("errorEmail");
+        }
+    
+    if (!/^[0-9]{9}$/.test(telefono.value.trim())) {
+        mostrarError('errorTelefono');
+        } else {
+        ocultarError('errorTelefono');
+        }
+
+    if (fecha.value === '' || parseInt(fecha.value) < 18) {
+    mostrarError('errorFecha');
+} else {
+    ocultarError('errorFecha');
+}
+
+    if (entrada.value === '') {
+        mostrarError('errorEntrada')
+    } else {
+        ocultarError('errorEntrada')
+    }
+
+    // Validación de preferencia
+        if (actividad1.checked === false && actividad2.checked === false && actividad3.checked === false)
+        {
+            mostrarError("errorActividades");
+        }
+        else
+        {
+            ocultarError("errorActividades");
+        }
+
+    if (politica.checked === false) {
+        mostrarError('errorPolitica')
+    } else {
+        ocultarError('errorPolitica')
+    }
+
+    // Función para mostrar errores
+    function mostrarError(id){
+        const campoError = document.getElementById(id);
+        campoError.style.visibility='visible';
+    }
+
+    // Función para ocultar errores
+    function ocultarError(id){
+      const campoError = document.getElementById(id);
+      campoError.style.visibility='hidden';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
